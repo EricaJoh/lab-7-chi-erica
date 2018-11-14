@@ -23,7 +23,7 @@ utoh
 Creator (Erica):
 getting gc_df data, loading the tidyverse, and getting some summary counts
 
-```{r}
+```{r, include = FALSE}
 library(tidyverse)
 gc_df <- read_csv("gc_df.csv")
 
@@ -35,4 +35,31 @@ get_guns <- gc_df %>%
 
 rownames(get_guns) <- c("female", "male")
 ```
+
+I'm the collaborator (Jason) and I am going to do a chi-square.
+
+Does gender have a significant effect on gun control persepectives as related to access to guns?
+
+Is there a significant association between sex & gun control recommendations?
+
+Is perception of gun control independent of sex?
+
+Chi-square
+
+```{r, include = FALSE}
+
+#as.matrix make it easier for prop.table to work with
+guns_prop <- prop.table(as.matrix(get_guns), 1)
+
+guns_prop
+
+# Performing chi-square
+
+guns_x2 <- chisq.test(get_guns)
+
+guns_x2
+
+```
+
+Recommended government action on gun access differed significantly for males and females ($\chi^2$(`r guns_x2$parameter`) = ...., p < 0.001).
 
