@@ -19,3 +19,14 @@ This is Jason.
 >>>>>>> aed487bc61e0ef559479416b03482f2528e795ff
 
 utoh
+
+Creator (Erica):
+getting gc_df data, loading the tidyverse, and getting some summary counts
+
+```{r}
+library(tidyverse)
+gc_df <- read_csv("gc_df.csv")
+
+View(gc_df)
+```
+
