@@ -12,4 +12,10 @@ I'm Erica and I am adding this text here to see if my collaborators can get this
 
 It's Erica again and I am updating some text.
 
+<<<<<<< HEAD
 hello this is lily. againjhdfjkhskdf
+=======
+This is Jason.
+>>>>>>> aed487bc61e0ef559479416b03482f2528e795ff
+
+utoh
